@@ -23,5 +23,9 @@ Provide the command as flags or use interactive prompt to select files and comma
             type: String,
             description: "The files you want to watch, separated by commas in one string",
         },
+        skipCopy: {
+            type: Boolean,
+            description: "Skip copying the command to the clipboard",
+        },
     },
 };

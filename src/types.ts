@@ -1,5 +1,6 @@
 export type Options = {
-    deep?: number;
+    deep: number;
     command?: string;
     files?: string;
+    skipCopy?: boolean;
 };

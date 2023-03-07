@@ -5,7 +5,7 @@ import pc from "picocolors";
 import { Options } from "./types";
 import { buildCommandForExample, callout, warning } from "./utils";
 
-export const runPrompt = async ({ deep }: Options) => {
+export const runPrompt = async ({ deep, skipCopy }: Options) => {
     const currentFiles = await globby(["."], {
         gitignore: true,
         deep: deep,
@@ -37,14 +37,16 @@ export const runPrompt = async ({ deep }: Options) => {
         process.exit(0);
     }
 
-    const usageCommand = buildCommandForExample(command, files);
-    clipboard.writeSync(usageCommand);
+    if (!skipCopy) {
+        const usageCommand = buildCommandForExample(command, files);
+        clipboard.writeSync(usageCommand);
 
-    const message = `You can activate the watcher without prompt with the following command:
+        const message = `You can activate the watcher without prompt with the following command:
 ${callout(usageCommand)}
 It has been copied to the clipboard.`;
 
-    note(message);
+        note(message);
+    }
 
     outro("Wetch activated! Press Ctrl+C to stop watching");
 

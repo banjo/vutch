@@ -11,6 +11,7 @@ cli(cliConfig, async arguments_ => {
         deep: arguments_.flags.deep,
         command: arguments_.flags.command,
         files: arguments_.flags.files,
+        skipCopy: arguments_.flags.skipCopy,
     };
 
     const hasProvidedAllFlags = options.files && options.command;
