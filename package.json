@@ -1,7 +1,7 @@
 {
     "name": "wetch",
     "type": "module",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "private": false,
     "description": "",
     "author": "Anton Ödman <anton.odman@gmail.com>",
@@ -33,7 +33,7 @@
         "dev": "tsup --watch",
         "lint": "eslint --ext .js,.ts,.json .",
         "prepublishOnly": "nr build",
-        "release": "bumpp && npm publish",
+        "release": "bumpp && npm publish --access public",
         "start": "esno src/index.ts",
         "test": "vitest --watch=false",
         "test:dev": "vitest",
