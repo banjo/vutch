@@ -8,7 +8,7 @@ export const warning = (content: string) => pc.red(content);
 
 export const buildCommandForExample = (command: string, files: string[]) => {
     const commandWithUnderscores = command.replaceAll(" ", "_");
-    return `wetch --command=${commandWithUnderscores} --files=${files.join(",")}`;
+    return `vutch --command=${commandWithUnderscores} --files=${files.join(",")}`;
 };
 
 export const watchFiles = (command: string, files: string[]) => {

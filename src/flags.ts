@@ -11,7 +11,7 @@ export const runFlags = (properties: Options) => {
         throw new Error("You must provide both the files and the command");
     }
 
-    console.log(normal("\nWetch activated! Press Ctrl+C to stop watching"));
+    console.log(normal("\nvutch activated! Press Ctrl+C to stop watching"));
 
     return {
         command,

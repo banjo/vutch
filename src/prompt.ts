@@ -22,7 +22,7 @@ export const runPrompt = async ({ deep, skipCopy }: Options) => {
     })) as string[];
 
     if (isCancel(files)) {
-        outro(warning("Wetch cancelled"));
+        outro(warning("vutch cancelled"));
         process.exit(0);
     }
 
@@ -33,7 +33,7 @@ export const runPrompt = async ({ deep, skipCopy }: Options) => {
     })) as string;
 
     if (isCancel(command)) {
-        outro(warning("Wetch cancelled"));
+        outro(warning("vutch cancelled"));
         process.exit(0);
     }
 
@@ -48,7 +48,7 @@ It has been copied to the clipboard.`;
         note(message);
     }
 
-    outro("Wetch activated! Press Ctrl+C to stop watching");
+    outro("vutch activated! Press Ctrl+C to stop watching");
 
     return {
         command,

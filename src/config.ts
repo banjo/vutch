@@ -1,13 +1,13 @@
 import { version } from "../package.json";
 
 export const cliConfig = {
-    name: "wetch",
+    name: "vutch",
     version,
     help: {
         description: `Watch and execute commands on file changes. 
 Provide the command as flags or use interactive prompt to select files and command.`,
-        usage: "wetch [options]",
-        examples: ["wetch", "wetch --command=npm_run_build --files=src/index.ts,src/utils.ts"],
+        usage: "vutch [options]",
+        examples: ["vutch", "vutch --command=npm_run_build --files=src/index.ts,src/utils.ts"],
     },
     flags: {
         deep: {

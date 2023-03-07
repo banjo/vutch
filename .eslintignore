@@ -5,3 +5,5 @@ coverage
 lib
 bin
 *-lock.*
+.github
+*.md
