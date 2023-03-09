@@ -27,5 +27,10 @@ Provide the command as flags or use interactive prompt to select files and comma
             type: Boolean,
             description: "Skip copying the command to the clipboard",
         },
+        throws: {
+            type: Boolean,
+            description: "Throw errors instead of logging them",
+            default: false,
+        },
     },
 };

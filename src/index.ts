@@ -12,6 +12,7 @@ cli(cliConfig, async arguments_ => {
         command: arguments_.flags.command,
         files: arguments_.flags.files,
         skipCopy: arguments_.flags.skipCopy,
+        throws: arguments_.flags.throws,
     };
 
     const hasProvidedAllFlags = options.files && options.command;

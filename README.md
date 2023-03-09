@@ -28,6 +28,9 @@ vutch --deep=3
 
 # prompt without copying command to clipboard
 vutch --skip-copy
+
+# throw errors instead of logging them
+vutch --throws
 ```
 
 ## Flags
@@ -36,3 +39,4 @@ vutch --skip-copy
 -   `--command` - Command to execute when files change, use underscore instead of spaces.
 -   `--deep` - How deep to go in the directory tree when using the prompt.
 -   `--skip-copy` - Do not copy command to clipboard when using the prompt.
+-   `--throws` - Throw errors instead of logging them on crasches.

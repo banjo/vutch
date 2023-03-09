@@ -14,7 +14,15 @@ export const buildCommandForExample = (command: string, files: string[]) => {
 export const watchFiles = (command: string, files: string[]) => {
     chokidar.watch(files).on("change", async path => {
         console.log(normal(`Change detected in ${callout(path)}, executing ${callout(command)}`));
-        await execaCommand(command, { stdio: "inherit" });
+
+        try {
+            await execaCommand(command, { stdio: "inherit" });
+        } catch (error) {
+            console.log(error);
+            console.log(warning("Command failed, restarting..."));
+            return;
+        }
+
         console.log(normal("\nCommand executed successfully"));
     });
 };

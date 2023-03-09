@@ -3,4 +3,5 @@ export type Options = {
     command?: string;
     files?: string;
     skipCopy?: boolean;
+    throws: boolean;
 };
