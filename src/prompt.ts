@@ -2,6 +2,7 @@ import { intro, isCancel, multiselect, note, outro, text } from "@clack/prompts"
 import clipboard from "clipboardy";
 import { globby } from "globby";
 import pc from "picocolors";
+import { ALWAYS_IGNORE } from "./config";
 import { Options } from "./types";
 import { buildCommandForExample, callout, warning } from "./utils";
 
@@ -9,6 +10,7 @@ export const runPrompt = async ({ deep, skipCopy }: Options) => {
     const currentFiles = await globby(["."], {
         gitignore: true,
         deep: deep,
+        ignore: ALWAYS_IGNORE,
     });
 
     intro(pc.bgGreen(pc.black(" Execute commands on file changes ")));

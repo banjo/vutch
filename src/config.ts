@@ -34,3 +34,5 @@ Provide the command as flags or use interactive prompt to select files and comma
         },
     },
 };
+
+export const ALWAYS_IGNORE = ["node_modules", "dist", "lib", "bin", "build"];
