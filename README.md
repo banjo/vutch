@@ -1,8 +1,8 @@
 # vutch
 
-![vutch example](.github/assets/vutch.png)
-
 Execute commands when files change. Either with a simple prompt in the CLI, or with two simple flags.
+
+![vutch example](.github/assets/vutch.png)
 
 -   Run `vutch` to choose files and commands in a beautiful CLI.
 -   Define files and command directly with the `--files` and `--command` flags.
