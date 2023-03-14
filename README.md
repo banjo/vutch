@@ -21,7 +21,7 @@ npm install vutch -g
 vutch
 
 # run with flags
-vutch --files=index.js,config.js  --command="npm_run_build"
+vutch --files "index.js,config.js"  --command "npm run build"
 
 # prompt with deeper directory
 vutch --deep=3
@@ -36,7 +36,7 @@ vutch --throws
 ## Flags
 
 -   `--files` - Comma separated list of files to watch.
--   `--command` - Command to execute when files change, use underscore instead of spaces.
+-   `--command` - Command to execute when files change.
 -   `--deep` - How deep to go in the directory tree when using the prompt.
 -   `--skip-copy` - Do not copy command to clipboard when using the prompt.
 -   `--throws` - Throw errors instead of logging them on crasches.
