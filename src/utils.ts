@@ -7,8 +7,7 @@ export const normal = (content: string) => pc.yellow(content);
 export const warning = (content: string) => pc.red(content);
 
 export const buildCommandForExample = (command: string, files: string[]) => {
-    const commandWithUnderscores = command.replaceAll(" ", "_");
-    return `vutch --command=${commandWithUnderscores} --files=${files.join(",")}`;
+    return `vutch --command "${command}" --files "${files.join(",")}"`;
 };
 
 export const watchFiles = (command: string, files: string[]) => {
