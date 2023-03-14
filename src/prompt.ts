@@ -50,7 +50,7 @@ It has been copied to the clipboard.`;
         note(message);
     }
 
-    outro("vutch activated! Press Ctrl+C to stop watching");
+    outro(pc.bgGreen(pc.black(" Vutch activated! Press Ctrl+C to stop watching ")));
 
     return {
         command,
